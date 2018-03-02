@@ -29,6 +29,6 @@ export class NullPointerException {
    * @returns {boolean}
    */
   static isValid(tweetData: OdnTweetData): boolean {
-    return tweetData.text.match(/^(ぬるぽ|ヌルポ|ﾇﾙﾎﾟ)$/gi) ? true : false;
+    return false === tweetData.isRetweet && tweetData.text.match(/^(ぬるぽ|ヌルポ|ﾇﾙﾎﾟ)$/gi) ? true : false;
   }
 }
